@@ -22,7 +22,7 @@ var EVIEXPORT = true; //Export EVI
 var NBREXPORT = true; //Export NBR
 
 //Map Indicies?
-var MapNDVI = false; //Map NDVI
+var MapNDVI = true; //Map NDVI
 var MapEVI = false; //Map EVI
 var MapNBR = false; //Map NBR
 
@@ -80,10 +80,6 @@ var BImage= L5imagery
   .filterBounds(Fire)
   .map(function(image){return image.clip(Fire)});
 }
-var BImage = L5imagery.filterDate(BYEARs,BYEARe)
-  .filterDate(BYEARs,BYEARe)
-  .filterBounds(Fire)
-  .map(function(image){return image.clip(Fire)});
 //Acquire Year 1 Imagery
 if (Year+1 >= 2013) {
 var Image1= L8imagery
