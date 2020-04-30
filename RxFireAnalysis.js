@@ -8,13 +8,13 @@ var L5imagery = ee.ImageCollection('LANDSAT/LT05/C01/T1_SR');
 var L8imagery = ee.ImageCollection('LANDSAT/LC08/C01/T1_SR');
 
 //set Fire Boundary
-var Fire = ee.FeatureCollection('users/joshsumers1996/WildfireShapes/Holiday');
+var Fire = ee.FeatureCollection('users/joshsumers1996/RxBurnShapes/Fire1');
 
 //what is Fire name? This will be used in File name
-var FireName = 'Holiday'; //Avoid Spaces
+var FireName = 'Fire1'; //Avoid Spaces
 
 //Set Fire Year
-var Year = 1998;
+var Year = 2013;
 
 //Export Images? Set This Parameter
 var EXPORTNDVI = true; // Export NDVI
