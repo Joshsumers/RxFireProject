@@ -23,7 +23,7 @@ var NBREXPORT = true; //Export NBR
 
 //Map Indicies?
 var MapNDVI = false; //Map NDVI
-var MapEVI = true; //Map EVI
+var MapEVI = false; //Map EVI
 var MapNBR = false; //Map NBR
 
 //Determine Base Data
@@ -46,7 +46,7 @@ var Year5s = ee.Date(Year+5+'-04-01');
 var Year5e = ee.Date(Year+5+'-04-30');
 
 //Confirm Imagery being used 
-if (BYear >= 2013) {
+if (Year >= 2013) {
   print('Base Year is greater than 2013, using Landsat8 Data');
 }
 else
@@ -70,13 +70,13 @@ else
 //Acquire Base Imagery
 if (Year >= 2013) {
 var BImage= L8imagery
-  .filter(ee.Filter.date(BYears,BYeare))
+  .filter(ee.Filter.date(BYEARs,BYEARe))
   .filterBounds(Fire)
   .map(function(image){return image.clip(Fire)});
 }
 else {
 var BImage= L5imagery
-  .filter(ee.Filter.date(BYears,BYeare))
+  .filter(ee.Filter.date(BYEARs,BYEARe))
   .filterBounds(Fire)
   .map(function(image){return image.clip(Fire)});
 }
